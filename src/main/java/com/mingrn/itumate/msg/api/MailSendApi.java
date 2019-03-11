@@ -1,7 +1,7 @@
-package com.mingrn.keeper.msg.api;
+package com.mingrn.itumate.msg.api;
 
-import com.mingrn.keeper.global.result.Result;
-import com.mingrn.keeper.msg.api.enums.MailTemplateEnums;
+import com.mingrn.itumate.global.result.Result;
+import com.mingrn.itumate.msg.api.enums.MailTemplateEnums;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2019-02-23 14:56
  */
 @FeignClient(
-        name = "${keeper.app.msg:msg-v1}",
+        name = "${itumate.app.msg:msg-v1}",
         path = "/mailSendApi"
 )
 public interface MailSendApi {
@@ -24,7 +24,7 @@ public interface MailSendApi {
      * @param subject  邮件标题
      * @param msg      邮件文本信息
      * @param receiver 接收者,支持数组
-     * @return {@link com.mingrn.keeper.global.result.Result}
+     * @return {@link com.mingrn.itumate.global.result.Result}
      */
     @PostMapping("/sendTextMessage")
     Result sendTextMessage(@RequestParam(name = "subject") String subject,
@@ -36,7 +36,7 @@ public interface MailSendApi {
      * @param subject     邮件标题
      * @param htmlContent 邮件HTML 信息
      * @param receiver    接收者,支持数组
-     * @return {@link com.mingrn.keeper.global.result.Result}
+     * @return {@link com.mingrn.itumate.global.result.Result}
      */
     @PostMapping("/sendHtmlMessage")
     Result sendHtmlMessage(@RequestParam(name = "subject") String subject,
@@ -49,7 +49,7 @@ public interface MailSendApi {
      * @param subject       邮件标题
      * @param templateEnums 邮件HTML模板 信息
      * @param receiver      接收者,支持数组
-     * @return {@link com.mingrn.keeper.global.result.Result}
+     * @return {@link com.mingrn.itumate.global.result.Result}
      */
     @PostMapping("/sendHtmlMessageWithFtl")
     Result sendHtmlMessageWithFtl(@RequestParam(name = "subject") String subject,

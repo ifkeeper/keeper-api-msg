@@ -1,6 +1,6 @@
-package com.mingrn.keeper.msg.api.enums;
+package com.mingrn.itumate.msg.api.enums;
 
-import com.mingrn.keeper.commons.utils.ftl.FreemarkerUtil;
+import com.mingrn.itumate.commons.utils.ftl.FreemarkerUtil;
 
 import java.util.Map;
 
