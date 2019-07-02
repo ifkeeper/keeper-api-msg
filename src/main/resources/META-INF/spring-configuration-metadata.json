@@ -1,0 +1,8 @@
+{
+  "properties": [{
+    "name": "itumate.app.msg",
+    "type": "java.lang.String",
+    "description": "itumate msg service name",
+    "defaultValue": "msg-v1"
+  }]
+}
