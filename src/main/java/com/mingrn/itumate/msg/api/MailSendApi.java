@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2019-02-23 14:56
  */
 @FeignClient(
-        name = "${itumate.app.msg:msg-v1}",
+        name = "${itumate.app.msg.service:msg-v1}",
         path = "/mailSendApi"
 )
 public interface MailSendApi {

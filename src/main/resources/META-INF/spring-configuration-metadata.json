@@ -1,8 +1,46 @@
 {
-  "properties": [{
-    "name": "itumate.app.msg",
-    "type": "java.lang.String",
-    "description": "itumate msg service name",
-    "defaultValue": "msg-v1"
-  }]
+  "properties": [
+    {
+      "name": "itumate.app.msg.service",
+      "type": "java.lang.String",
+      "description": "itumate msg 服务名称,请取默认值 msg-v1",
+      "defaultValue": "msg-v1"
+    },
+    {
+      "name": "msg-v1.ribbon.ConnectTimeout",
+      "type": "java.lang.Integer",
+      "description": "itumate Msg-V1 服务连接超时时间",
+      "defaultValue": 500
+    },
+    {
+      "name": "msg-v1.ribbon.ReadTimeout",
+      "type": "java.lang.Integer",
+      "description": "itumate Msg-V1 服务读取超时时间",
+      "defaultValue": 3000
+    },
+    {
+      "name": "msg-v1.ribbon.OkToRetryOnAllOperations",
+      "type": "java.lang.Boolean",
+      "description": "是否为 itumate Msg-V1 服务所有操作开启连接重试机制",
+      "defaultValue": true
+    },
+    {
+      "name": "msg-v1.ribbon.MaxAutoRetrys",
+      "type": "java.lang.Integer",
+      "description": "itumate Msg-V1 最大重试次数",
+      "defaultValue": 1
+    },
+    {
+      "name": "msg-v1.ribbon.MaxAutoRetriesNextServer",
+      "type": "java.lang.Integer",
+      "description": "itumate Msg-V1 重试发送,更换节点最大值",
+      "defaultValue": 3
+    },
+    {
+      "name": "hystrix.command.mailSendApi.execution.isolation.thread.timeoutInMinlliseconds",
+      "type": "java.lang.Integer",
+      "description": "itumate Msg-V1 熔断器超时时间,该值必须大于 msg-v1.ribbon.ReadTimeout",
+      "defaultValue": 10000
+    }
+  ]
 }
