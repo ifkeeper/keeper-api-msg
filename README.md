@@ -8,7 +8,7 @@ itumate-app-msg 客户端 Api；
 
 ```xml
 <dependency>
-    <groupId>${parent.groupId}</groupId>
+    <groupId>com.mingrn.itumate</groupId>
     <artifactId>itumate-api-msg</artifactId>
     <version>${itumate.msg-api.version}</version>
 </dependency>
